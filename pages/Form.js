@@ -19,7 +19,8 @@ function Form() {
     setFormData(formData.filter(data => data !== dataToDelete))
   }
 
-  return ( < form onSubmit = {
+  return (
+    <form onSubmit={
       handleSubmit
     } > {
       < input type = "text"
@@ -29,21 +30,11 @@ function Form() {
       }
       onChange = {
         handleChange
-      } > < /input>
-      /* <
-      input type = "text"
-      className = 'rounded-lg'
-      value = {
-        inputValue
-      }
-      onChange = {
-        handleChange
-      }
-      /> */
+      }> </input>
     } <
     button type = "submit"
     class = "bg-blue-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-lg" >
-    Submit < /button> <
+    Submit </button> <
     ul > {
       formData.map((data, index) => ( <
         li key = {
@@ -54,9 +45,9 @@ function Form() {
         button onClick = {
           () => handleDelete(data)
         } >
-        Delete < /button> </li >
+        Delete </button> </li >
       ))
-    } < /ul> </form >
+    } </ul> </form >
   )
 }
 export default Form;
